@@ -40,13 +40,13 @@ class _PaymentState extends State<Payment> {
             topRight: Radius.circular(25),
           ),
         ),
-        child: const Padding(
-          padding: EdgeInsets.all(8.0),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(left: 16,right: 16),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -62,8 +62,28 @@ class _PaymentState extends State<Payment> {
                   ],
                 ),
               ),
-             Divider(color: Colors.black54,),
-            Text('Confirm any One Payment System',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+             const Divider(color: Colors.black54,),
+              SizedBox(
+                height: 60,
+                width: 300,
+                child: OutlinedButton(
+                  onPressed: (){},
+                  child: Text(
+                    'Buy Now',
+                    style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  style: OutlinedButton.styleFrom(
+                    side: const BorderSide(width: 1, color: Colors.white),
+                    backgroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius:  BorderRadius.circular(8),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

@@ -224,51 +224,25 @@ class _DitailsState extends State<Ditails> {
             topRight: Radius.circular(25),
           ),
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            SizedBox(
-              height: 45,
-              width: 80,
-              child: OutlinedButton(
-                onPressed: (){},
-                child: Icon(
-                  Icons.add_shopping_cart,
-                  color: Colors.orange,
-                  size: 34,
-                ),
-                style: OutlinedButton.styleFrom(
-                  side: BorderSide(width: 1, color: Colors.white),
-                  backgroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
+        child: OutlinedButton(
+          onPressed: _buyNowButton,
+          child: Text(
+            'Add to Cart',
+            style: TextStyle(
+                fontSize: 24,
+                color: Colors.orange,
+                fontWeight: FontWeight.bold),
+          ),
+          style: OutlinedButton.styleFrom(
+            side: const BorderSide(width: 1, color: Colors.black),
+            backgroundColor: Colors.black,
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(25),
+                topRight: Radius.circular(25),
               ),
             ),
-
-            // SizedBox()
-            SizedBox(
-                height: 45,
-                width: 280,
-                child: OutlinedButton(
-                  onPressed: _buyNowButton,
-                  child: Text(
-                    'Buy Now',
-                    style: TextStyle(
-                        fontSize: 24,
-                        color: Colors.orange,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  style: OutlinedButton.styleFrom(
-                    side: const BorderSide(width: 1, color: Colors.white),
-                    backgroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
-                )),
-          ],
+          ),
         ),
       ),
       backgroundColor: Colors.white,
